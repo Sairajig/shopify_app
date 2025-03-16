@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopify Data Tool</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Header Styling */
+    header {
+      background: linear-gradient(to right, #4caf50, #2e7d32);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+    }
+
+    /* Container */
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgb(212, 32, 32);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #4caf50;
+    }
+
+    /* Button Styling */
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    /* Input File Styling */
+    input[type="file"] {
+      margin-top: 10px;
+    }
+
+    /* Download Links */
+    .download-buttons a {
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      margin-right: 10px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-buttons a:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+      background: #f1f1f1;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Shopify Data Tool</h1>
+  <p>Retrieve, process, and export Shopify data efficiently</p>
+</header>
+
+<div class="container">
+  <!-- Fetch Shopify Data Section -->
+  <div class="section">
+    <h2>Fetch Shopify Data</h2>
+    <button>
+      <span>📡</span> Fetch Data
+    </button>
+  </div>
+
+  <!-- Upload CSV Section -->
+  <div class="section">
+    <h2>Upload CSV for Sorting</h2>
+    <input type="file" id="fileInput">
+    <button>
+      <span>⬆</span> Upload and Sort
+    </button>
+  </div>
+
+  <!-- Download Processed Files Section -->
+  <div class="section">
+    <h2>Download Processed Files</h2>
+    <div class="download-buttons">
+      <a href="#" download>📥 Download Data</a>
+      <a href="#" download>📄 Download JSON</a>
+      <a href="#" download>📊 Download CSV</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2024 Shopify Data Tool. All Rights Reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<hmtl lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Data Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playwrite+IE+Guides&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Shopify </h1>
+        <p>Retrieve, process, and export shopify data efficiently.</p>
+
+    </header>
+<main>
+    <!-- Section to fetch Shopify Data-->
+    <section id ="fetch-data">
+        <h2>Fetch Shopify Data</h2>
+        <button onclick="fetchData()">📡Fetch Data</button>
+        <p id="fetch-status"></p>
+    </section>
+        <!-- Section to upload a CSV file -->
+    <section id="upload-csv">
+        <h2>Upload CSV for Sorting</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+          <label for="csv-file">Choose a CSV file:</label>
+          <input type="file" id="csv-file" name="csv-file" accept=".csv" required>
+          <button type="submit">Upload and Sort</button>
+        </form>
+        <p id="upload-status"></p>
+    </section>
+    <!-- Section to download processed data -->
+    <section id="download-files">
+        <h2>Download Processed Files</h2>
+        <div class="download-buttons"></div>
+        <a href="/processed_data.json" download><button type="Submit">📄Download Json</button></a>
+        
+        <a href="/processed_data.csv" download><button type="Submit">📊Download CSV</button></a>
+      </section>
+
+</main>
+<footer>
+    <p>&copy; 2024 Shopify Data Tool</p>
+</footer>
+<script>
+    function fetchData() {
+      // Simulate data fetch logic
+      document.getElementById('fetch-status').innerText = "Fetching data... (This will be linked to backend)";
+    }
+
+    document.getElementById('upload-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const fileInput = document.getElementById('csv-file');
+      if (fileInput.files.length === 0) {
+        document.getElementById('upload-status').innerText = "Please upload a file.";
+      } else {
+        document.getElementById('upload-status').innerText = "File uploaded successfully. (This will be linked to backend)";
+      }
+    });
+  </script>
+</body>
+</hmtl>
